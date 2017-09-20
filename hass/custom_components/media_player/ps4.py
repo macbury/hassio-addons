@@ -71,7 +71,7 @@ def setup_platform(hass, config, add_devices, discovery_info=None):
     if ip is None:
         _LOGGER.error("No PS4 found in configuration file or with discovery")
         return False
-
+    _LOGGER.info("Plafrorm ps4 is done: " + ip)
     host = config.get(CONF_HOST)
     name = config.get(CONF_NAME)
     games_filename = hass.config.path(config.get(CONF_GAMES_FILENAME))
@@ -104,6 +104,7 @@ class PS4Device(MediaPlayerDevice):
     @util.Throttle(MIN_TIME_BETWEEN_SCANS, MIN_TIME_BETWEEN_FORCED_SCANS)
     def update(self):
         """Retrieve the latest data."""
+        _LOGGER.info("Retreving the latest data")
         data = self.ps4.search()
         self._media_title = data.get('running-app-name')
         self._media_content_id = data.get('running-app-titleid')
@@ -124,7 +125,7 @@ class PS4Device(MediaPlayerDevice):
 
     def load_games_map(self):
         try:
-            self._games_map = json.loads(requests.get(self._games_map_json, verify=False))
+            self._games_map = json.loads(requests.get(self._games_map_json, verify=False).text)
         except Exception as e:
             _LOGGER.error("gamesmap json file could not be loaded, %s" % e)
 
@@ -252,6 +253,7 @@ class PS4Waker(object):
 
         try:
             response = requests.get(url, verify=False)
+            _LOGGER.info("GET " + url)
             if 200 != response.status_code:
                 raise Exception(response.text)
             return response.text
