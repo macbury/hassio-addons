@@ -1,7 +1,7 @@
 {
-    "name": "PS4WakerBridge",
+    "name": "MacPS4WakerBridge",
     "version": "0.0.2",
-    "slug": "ps4waker",
+    "slug": "macps4waker",
     "description": "REST wrapper around PS4-Waker (https://github.com/dhleong/ps4-waker)",
     "url": "https://github.com/vkorn/hassio-addons/tree/master/ps4waker",
     "image": "vkorn/{arch}-ps4waker",

@@ -12,22 +12,9 @@ SmartThings MQQT Bridge
 
 REST-wrapper arodun ps4-waker to support ps4 component
 
-## [DeviceLocator](https://github.com/vkorn/hassio-addons/tree/master/devicelocator) [![](https://images.microbadger.com/badges/version/vkorn/armhf-devicelocator.svg)](https://microbadger.com/images/vkorn/armhf-devicelocator "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/vkorn/armhf-devicelocator.svg)](https://microbadger.com/images/vkorn/armhf-devicelocator "Get your own image badge on microbadger.com")
-
-Simple service which will return IP of callind device. Useful for UI tweaking only.
-
-
-## [ConfigWatcher](https://github.com/vkorn/hassio-addons/tree/master/configwatcher) [![](https://images.microbadger.com/badges/version/vkorn/armhf-configwatcher.svg)](https://microbadger.com/images/vkorn/armhf-configwatcher "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/vkorn/armhf-configwatcher.svg)](https://microbadger.com/images/vkorn/armhf-configwatcher "Get your own image badge on microbadger.com")
-
-Config watchdog which will perform restarts if required. 
-
 ## Just code
 
-These add-ons are not being built intentionally as they are for testing purposes only. You'll need to download and place them under `/addons` folder of your Hass.io instance. 
-
-## [AppDaemon](https://github.com/vkorn/hassio-addons/tree/master/appdaemon)
-
-Beta-version of AppDaemon with HaDashobard v2.
+These add-ons are not being built intentionally as they are for testing purposes only. You'll need to download and place them under `/addons` folder of your Hass.io instance.
 
 ## Usefull commands
 
